@@ -1,10 +1,10 @@
-# Ruby on Rails Projects
+# Ruby Algorithm Projects
 
-This repository contains various Ruby on Rails projects demonstrating different algorithms and problem-solving techniques. Each project focuses on a unique algorithm or concept, implemented with a web-based interface using Rails.
+This repository contains a collection of Ruby scripts showcasing various algorithms and problem-solving techniques. Each project is implemented as a standalone `.rb` file, demonstrating different computational approaches and data structures.
 
 ## Table of Contents
 
-- [Projects Overview](#projects-overview)
+- [Project Overview](#project-overview)
   - [Decomposition of Three](#decomposition-of-three)
   - [Game of Life](#game-of-life)
   - [K Stacks](#k-stacks)
@@ -15,93 +15,122 @@ This repository contains various Ruby on Rails projects demonstrating different 
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-## Projects Overview
+## Project Overview
 
 ### 1. Decomposition of Three
-**Description:** This project explores different ways to decompose a number into three distinct parts that add up to the given number. The application provides an interface to input a number and displays all possible decompositions.
+**Description:** This script computes all possible decompositions of a given number into three distinct parts whose sum equals the number. It’s useful for mathematical exploration and combinatorial problems.
 
 **Features:**
-- Input validation for positive integers.
-- Displays all valid decompositions.
-- Interactive interface for user inputs.
+- Accepts any positive integer as input.
+- Outputs all valid decompositions in a readable format.
+
+**Usage Example:**
+```ruby
+ruby decomposition_of_three.rb 9
+# Output:
+# [1, 2, 6]
+# [1, 3, 5]
+# [2, 3, 4]
+```
 
 ### 2. Game of Life
-**Description:** A simulation of Conway’s Game of Life. This project visually represents the cellular automaton game where cells live, die, or multiply based on a set of rules.
+**Description:** A Ruby implementation of Conway’s Game of Life. This program simulates the evolution of a grid-based system of cells according to simple rules, demonstrating the emergence of complex behavior from simple rules.
 
 **Features:**
-- Grid-based representation of cells.
-- Start, pause, and reset controls for the simulation.
-- Customizable grid size and initial configurations.
+- Configurable grid size and initial state.
+- Outputs the grid after each generation.
+
+**Usage Example:**
+```ruby
+ruby game_of_life.rb
+# Outputs grid states for each generation.
+```
 
 ### 3. K Stacks
-**Description:** Implementation of multiple stacks in a single array. This project demonstrates how to efficiently use a single array to manage multiple stacks, ideal for situations with limited memory.
+**Description:** Implementation of `k` stacks using a single array, showcasing an efficient way to manage multiple stacks with minimal memory overhead.
 
 **Features:**
-- Create, push, and pop operations for multiple stacks.
-- Visualization of stack states and operations.
-- Error handling for overflow and underflow conditions.
+- Push and pop operations for multiple stacks.
+- Handles overflow and underflow conditions gracefully.
+
+**Usage Example:**
+```ruby
+ruby k_stacks.rb
+# Outputs stack operations and current state.
+```
 
 ### 4. PAL Sort
-**Description:** A project that sorts an array in such a way that every adjacent pair forms a palindrome when concatenated. This interesting sorting algorithm is showcased through a user-friendly interface.
+**Description:** Sorts an array such that adjacent elements, when concatenated, form a palindrome. This is a unique take on sorting that ensures special properties in the output array.
 
 **Features:**
-- Input array customization.
-- Visual representation of sorting steps.
-- Verifies the palindrome condition for adjacent elements.
+- Takes an array of strings as input.
+- Outputs a palindrome-compatible sorted array.
+
+**Usage Example:**
+```ruby
+ruby pal_sort.rb
+# Outputs sorted array with palindrome properties.
+```
 
 ### 5. Prime Factorization
-**Description:** A web-based tool to compute and display the prime factorization of a given number. The project aims to provide an interactive and educational tool for understanding prime factorization.
+**Description:** Computes and displays the prime factorization of a given number. This script breaks down any positive integer into its prime factors.
 
 **Features:**
-- Input validation for positive integers.
-- Step-by-step breakdown of the factorization process.
-- Visual representation of the factor tree.
+- Accepts any positive integer as input.
+- Outputs prime factors in a formatted manner.
+
+**Usage Example:**
+```ruby
+ruby prime_factorization.rb 84
+# Output:
+# 2^2 * 3^1 * 7^1
+```
 
 ### 6. Shortest Path
-**Description:** An implementation of the shortest path algorithms, such as Dijkstra’s or A*, for finding the shortest path between nodes in a graph. The project provides a visual interface to create a graph and find the shortest path.
+**Description:** Implements shortest path algorithms (like Dijkstra's) for finding the shortest path between nodes in a graph. The script reads graph data and computes the shortest path for given nodes.
 
 **Features:**
-- Interactive graph creation with nodes and edges.
-- Visual representation of the shortest path calculation.
-- Supports multiple algorithms for pathfinding.
+- Input flexibility for custom graphs.
+- Outputs the shortest path and its cost.
+
+**Usage Example:**
+```ruby
+ruby shortest_path.rb
+# Outputs shortest path and total distance for given nodes.
+```
 
 ## Setup and Installation
 
-To run these projects locally, follow the steps below:
-
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/rails-projects.git
-   cd rails-projects
+   git clone https://github.com/yourusername/ruby-algorithms.git
+   cd ruby-algorithms
    ```
 
-2. **Install Dependencies:**
-   Make sure you have Ruby and Rails installed. Then, install the required gems:
+2. **Install Ruby:**
+   Ensure you have Ruby installed. You can check your Ruby version with:
    ```bash
-   bundle install
+   ruby -v
    ```
 
-3. **Setup Database:**
+3. **Install Dependencies (if any):**
+   Some scripts may require additional gems. Run `bundle install` if a `Gemfile` is present, or manually install necessary gems using:
    ```bash
-   rails db:create
-   rails db:migrate
+   gem install gem_name
    ```
-
-4. **Start the Server:**
-   ```bash
-   rails server
-   ```
-   Open your browser and go to `http://localhost:3000` to view the projects.
 
 ## Usage
 
-- Each project is available as a separate route in the application.
-- Navigate to `/decomposition_of_three`, `/game_of_life`, etc., to access the respective project.
-- Use the interface to interact with the algorithms and view the results.
+1. Navigate to the project directory.
+2. Run the desired script by passing any required arguments. For example:
+   ```bash
+   ruby prime_factorization.rb 84
+   ```
+3. Follow the on-screen prompts or enter data as required by the script.
 
 ## Contributing
 
-Contributions are welcome! If you have any improvements or additional features to suggest, feel free to open a pull request or raise an issue.
+Contributions are welcome! If you have enhancements or new algorithms to add, feel free to fork the repository, create a new branch, and submit a pull request.
 
 1. Fork the repository.
 2. Create your feature branch: `git checkout -b feature/your-feature-name`
