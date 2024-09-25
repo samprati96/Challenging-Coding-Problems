@@ -14,7 +14,6 @@ This repository contains various Ruby on Rails projects demonstrating different 
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Projects Overview
 
